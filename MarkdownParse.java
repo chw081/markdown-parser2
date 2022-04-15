@@ -24,11 +24,11 @@ public class MarkdownParse {
                     currentIndex = closeParen + 1;
                 }
                 else {
-                    currentIndex = markdown.length();
+                    currentIndex ++;
                 }
             }
             else {
-                currentIndex = markdown.length();
+                currentIndex ++;
             }
             
         }
