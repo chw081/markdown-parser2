@@ -16,6 +16,98 @@ public class MarkdownParseTest {
         Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
-        assertEquals(links, new String[] {"https://something.com", "some-page.html"});
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("https://something.com");
+        expected.add("some-thing.html");
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
     }
+
+    @Test
+    public void MarkdownParseTest2() throws IOException {
+        Path fileName = Path.of("test-file2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("https://something.com");
+        expected.add("some-page.html");
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+
+    @Test
+    public void MarkdownParseTest3() throws IOException {
+        Path fileName = Path.of("test-file3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+
+    @Test
+    public void MarkdownParseTest4() throws IOException {
+        Path fileName = Path.of("test-file4.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+
+    @Test
+    public void MarkdownParseTest5() throws IOException {
+        Path fileName = Path.of("test-file5.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+
+    /*
+    @Test
+    public void MarkdownParseTest6() throws IOException {
+        Path fileName = Path.of("test-file6.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+    */
+
+
+    @Test
+    public void MarkdownParseTest7() throws IOException {
+        Path fileName = Path.of("test-file7.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+
+
+    @Test
+    public void MarkdownParseTest8() throws IOException {
+        Path fileName = Path.of("test-file8.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> expected = new ArrayList<String>();
+
+        boolean actual = links.equals(expected);
+        assertEquals(true, actual);
+    }
+
 }
+
+//javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java
+//java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest
