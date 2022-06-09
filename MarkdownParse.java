@@ -68,7 +68,7 @@ public class MarkdownParse {
             int closeParen = findCloseParen(markdown, openParen);
             
             if(nextOpenBracket == -1 || nextCloseBracket == -1
-                  || closeParen == -1 || openParen == -1) {
+                  || closeParen == -1 || openParen != nextCloseBracket + 1) {
                 return toReturn;
             }
             String potentialLink = markdown.substring(openParen + 1, closeParen).trim();
